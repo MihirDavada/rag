@@ -1,0 +1,37 @@
+--> Create Virtual Environment.
+
+    --> python -m venv DRFVirtualEnv
+
+    --> Set-ExecutionPolicy Unrestricted -Scope Process
+
+    --> .\DRFVirtualEnv\Scripts\activate
+
+    --> pip install streamlit pypdf2 langchain faiss-cpu openai huggingface_hub dotenv
+
+--> Create GUI.
+
+    --> We Are Going To Use Streamlit For Graphical User Interface.
+
+    --> https://streamlit.io/
+
+--> .env file
+
+    --> In This File , We Are Going To Set Our Secret Keys For OPENAI As Well As huggingface_hub
+
+    --> The Keys Which Are Inside .env File Are Supposed To Be Secret And They Are Not Tracked By The Git.
+
+        OPENAI_API_KEY = ''
+        HUGGINGFACEHUB_API_TOKEN = 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
+
+    --> To Use This KEYS In any other application , we have to use other third party package( dotenv ).
+
+        from dotenv import load_dotenv
+        load_dotenv()
+
+--> To Run The Project In Streamlit , We Have To Use Below Command.
+
+    --> streamlit run app.py
+
+--> Functionality
+
+    --> Read App.py
